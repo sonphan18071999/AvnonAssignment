@@ -48,7 +48,9 @@ export class NewQuestionDialogComponent implements OnInit {
 
   questions: Question[] = []
 
-  // options: WritableSignal<{ value: string; label: string }[]> = signal<[{ value: string, label: string }]>([{ value: "", label: "" }])
+  get optionsArray() {
+    return this.form.controls["options"] as FormArray;
+  }
 
   constructor(public dialogRef: MatDialogRef<NewQuestionDialogComponent>, private formBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public questionData: Question) { }
@@ -77,21 +79,19 @@ export class NewQuestionDialogComponent implements OnInit {
   }
 
   addNewOptions(): void {
-    const lessonForm = this.formBuilder.group({
-      value: ['', Validators.required],
-      label: ['beginner', Validators.required]
+    const formGroup = this.formBuilder.group({
+      value: ["value", Validators.required],
+      text: ["text", Validators.required]
     });
-
-    this.options.push(lessonForm);
-
+    this.optionsArray.push(formGroup);
   }
 
-  get options() {
-    return this.form.controls["options"] as FormArray;
-  }
+
 
   getControls() {
+    console.log((this.form.get('options') as FormArray).controls)
     return (this.form.get('options') as FormArray).controls;
   }
+
 }
 

@@ -17,14 +17,14 @@
       @if(isCheckBoxType()){
 
       @for(optionFormGroup of getControls();track optionFormGroup;let idx = $index){
-      <div formGroupName="optionFormGroup[idx]">
+      <!-- <div formGroupName="optionFormGroup[idx]">
         <div style="display: flex;">
           <mat-checkbox formControlName="value"></mat-checkbox>
           <mat-form-field>
             <input formControlName="label" matInput type="text" placeholder="Type answer here" />
           </mat-form-field>
         </div>
-      </div>
+      </div> -->
       }
 
       <button mat-raised-button (click)="addNewOptions()">Add Answer Option</button>

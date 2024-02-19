@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, WritableSignal, signal } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Question } from '../../../models/question.model';
 
 @Component({
@@ -8,10 +8,7 @@ import { Question } from '../../../models/question.model';
   templateUrl: './paragraph-question.component.html',
   styleUrl: './paragraph-question.component.scss'
 })
-export class ParagraphQuestionComponent implements OnInit {
+export class ParagraphQuestionComponent {
 
   @Input() question: Question = {} as Question;
-  ngOnInit(): void {
-    console.log(this.question)
-  }
 }
