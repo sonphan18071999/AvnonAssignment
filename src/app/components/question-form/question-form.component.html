@@ -1,0 +1,20 @@
+@if(questions().length !== 0){
+<mat-card class="question__form">
+  @for(question of questions();track question){
+  <app-paragraph-question [question]="question" />
+  }
+  <app-check-box-question />
+  <hr />
+
+  <div class="question__form-actions">
+    <div>
+      <button mat-button>Add New Question</button>
+
+    </div>
+    <div class="question__form-actions-submit">
+      <button mat-raised-button>Review my answer</button>
+    </div>
+  </div>
+</mat-card>
+
+}

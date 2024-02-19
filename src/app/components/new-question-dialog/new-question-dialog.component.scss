@@ -1,0 +1,19 @@
+.new__question {
+    width: 100%;
+
+    &-contents {
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-submit {
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+    }
+}

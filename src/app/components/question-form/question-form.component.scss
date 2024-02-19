@@ -1,0 +1,14 @@
+.question__form{
+    padding: 1rem;
+    margin-top: 1rem;
+    
+    .question__form-actions {
+        display: flex;
+        flex-direction: column;
+    
+        &-submit {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}
