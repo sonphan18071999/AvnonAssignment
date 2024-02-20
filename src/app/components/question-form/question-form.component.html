@@ -2,7 +2,7 @@
 <mat-card class="question__form">
   @for(question of questions();track question){
   @if(question.type ==='Checkbox'){
-  <app-check-box-question question]="question" />
+  <app-check-box-question [question]="question" />
   }
   @else{
   <app-paragraph-question [question]="question" />

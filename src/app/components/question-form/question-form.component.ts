@@ -15,7 +15,6 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class QuestionFormComponent implements OnInit {
   questions = computed(() => {
-    console.log(this.questionService.questions())
     return this.questionService.questions();
   })
 
