@@ -2,9 +2,13 @@
     width: 100%;
 
     &-contents {
-        .form{
+        .form {
             display: flex;
             flex-direction: column;
+
+            .options {
+                width: 100% !important;
+            }
         }
     }
 

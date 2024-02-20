@@ -79,18 +79,15 @@ export class NewQuestionDialogComponent implements OnInit {
   }
 
   addNewOptions(): void {
-    const formGroup = this.formBuilder.group({
-      value: ["value", Validators.required],
-      text: ["text", Validators.required]
+    const optionForm = this.formBuilder.group({
+      id:"",
+      value: ["", Validators.required]
     });
-    this.optionsArray.push(formGroup);
+    this.optionsArray.push(optionForm);
   }
 
-
-
-  getControls() {
-    console.log((this.form.get('options') as FormArray).controls)
-    return (this.form.get('options') as FormArray).controls;
+  getControls(): any {
+    return this.optionsArray.controls;
   }
 
 }
