@@ -11,6 +11,6 @@ export class QuestionService {
   constructor() { }
 
   updateQuestions(question: CheckboxQuestion | ParagraphQuestion): void {
-    this.questions.update((questions) => [question, ...questions])
+    this.questions.update((questions) => [...questions,question])
   }
 }

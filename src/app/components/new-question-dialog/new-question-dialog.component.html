@@ -15,9 +15,8 @@
       </mat-form-field>
 
       @if(isCheckBoxType()){
-
       @for(optionFormGroup of getControls();track optionFormGroup;let index = $index){
-      <form [formGroup]="optionFormGroup" >
+      <form [formGroup]="optionFormGroup">
         <div style="display: flex;">
           <mat-checkbox formControlName="id"></mat-checkbox>
           <mat-form-field class="options">

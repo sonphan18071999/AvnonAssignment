@@ -9,6 +9,6 @@ import { Question } from '../../../models/question.model';
   styleUrl: './paragraph-question.component.scss'
 })
 export class ParagraphQuestionComponent {
-
   @Input() question: Question = {} as Question;
+
 }

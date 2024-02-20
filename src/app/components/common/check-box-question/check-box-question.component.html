@@ -1,4 +1,13 @@
 <div class="check-box__question">
-    <p><b>Title</b></p>
-    <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+    <form [formGroup]="form">
+        <p><b>{{question.text}} @if(question.required){(*)}</b></p>
+        @for(optionFormGroup of getControls();track optionFormGroup;let index = $index){
+        <form [formGroup]="optionFormGroup">
+            <mat-checkbox formControlName="id"></mat-checkbox>
+            <mat-form-field class="options">
+                <input formControlName="value" matInput type="text" placeholder="Type answer here" />
+            </mat-form-field>
+        </form>
+        }
+    </form>
 </div>
